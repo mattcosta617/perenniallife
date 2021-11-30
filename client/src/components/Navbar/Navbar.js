@@ -13,7 +13,7 @@ function Navbar() {
     const navigate = useNavigate();
     const location = useLocation();
     const logout = () => {
-        dispatch({ type: 'LOGOUT' });
+       dispatch({ type: 'LOGOUT' });
 
         navigate('/');
         setUser(null);
@@ -29,7 +29,7 @@ function Navbar() {
             }
 
             setUser(JSON.parse(localStorage.getItem('profile')));
-        }, [location, logout, user?.token]);
+        }, [location, user?.token]);
 
     return (
         <AppBar className={classes.appBar} position="static" color="inherit">
