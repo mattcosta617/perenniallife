@@ -1,7 +1,7 @@
 import { FETCH_ALL, CREATE, UPDATE, DELETE } from '../constants/actionTypes';
 import * as api from '../api';
 
-export const getPosts = () => async (dispatch) => {
+export const getPosts = (e) => async (dispatch) => {
     try {
         const { data } = await api.fetchPosts();
         
